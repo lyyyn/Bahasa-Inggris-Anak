@@ -1,0 +1,20 @@
+<hr>
+<div class="columns">
+    <div class="column is-one-fifth">
+        <img class="image is-64x64" src="<%=product.image%>" alt="<%=product.name%>">
+    </div>
+    <div class="column is-two-fifths">
+        <%=product.name%>
+    </div>
+    <div class="column is-one-fifths">
+        <%=product.price%>
+    </div>
+    <div class="column is-one-fifths">
+        <a class="button bottom" href="/admin/edit/<%=idx%>">Edit</a>
+    </div>
+    <div class="column is-one-fifths">
+        <form action="/admin/<%= idx %>?_method=DELETE" method="POST">
+            <input type="submit" class="button bottom" value="Delete" />
+        </form>
+    </div>
+</div>
