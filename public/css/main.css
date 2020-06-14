@@ -1,3 +1,10 @@
 body{
     background-color: antiquewhite;
 }
+
+header {
+    background: url('/imgs/header.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+}
