@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' href='/imgs/BIA-favicon.png' type='image/x-icon'/ >
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -13,7 +14,26 @@
 <body>
     <header>
         <nav class="nav-wrapper transparent">
-
+            <div class="container">
+                <a href="" class="brand-logo"><img class="logo" src="/imgs/BIA-logo.png" alt="BIA logo"></a>
+                <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons light-blue-text text-darken-2">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="red darken-4" href="#">Beranda</a></li>
+                    <li><a class="orange darken-3" href="#">Guru</a></li>
+                    <li><a class="amber" href="#">Orang Tua</a></li>
+                    <li><a class="green accent-4" href="#">Materi</a></li>
+                    <li><a class="light-blue darken-2" href="#">Hubungi</a></li>
+                </ul>
+                <ul class="sidenav white" id="mobile-menu">
+                    <li><a class="red darken-4 white-text" href="#">Beranda</a></li>
+                    <li><a class="orange darken-3 white-text" href="#">Guru</a></li>
+                    <li><a class="amber white-text" href="#">Orang Tua</a></li>
+                    <li><a class="green accent-4 white-text" href="#">Materi</a></li>
+                    <li><a class="light-blue darken-2 white-text" href="#">Hubungi</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <h1>Bahasa Inggris Anak Homepage</h1>
@@ -21,6 +41,11 @@
     <script scr="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
 </body>
 
 </html>
