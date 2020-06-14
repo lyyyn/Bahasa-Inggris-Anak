@@ -3,7 +3,7 @@
 
 module.exports = {
     index: (req, res) => {
-        res.render('index.ejs');
+        res.sendFile('/index.html');
     },
     guruSection: (req, res) => {
         res.render('section.ejs',
