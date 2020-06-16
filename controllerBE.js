@@ -5,14 +5,16 @@ const path = require('path');
 module.exports = {
     adminPanel: (req, res) => {
         res.render('be/dashboard.ejs',{
-            sectionName: 'Dashboard'
+            sectionName: 'Dashboard',
+            textColor: 'red-text text-darken-4',
+            sectionColor: 'red darken-4'
         });
     },
     guruList: (req, res) => {
         res.render('be/admListing.ejs',{
             sectionName: 'Guru',
-            titleColor: 'orange-text text-darken-3',
-            buttonColor: 'orange darken-3'
+            textColor: 'orange-text text-darken-3',
+            sectionColor: 'orange darken-3'
         });
     },
     guruAdd: (req, res) => {

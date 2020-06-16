@@ -27,6 +27,11 @@ ul {
     padding-left: 0;
 }
 
+.hr {
+    height: 2px;
+    margin: 0px 0 10px 0;
+}
+
 .menu {
     font-family: 'Balsamiq Sans', cursive;
 }

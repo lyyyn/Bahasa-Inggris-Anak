@@ -13,39 +13,41 @@
         <div class="row">
             <%- include('../partials/adm-side-menu.ejs') %>
             <div class="col s12 m10">
-                <h4 class="red-text <%=titleColor%>"><%=sectionName%></h4>
+                <h4 class="red-text <%=textColor%>"><%=sectionName%></h4>
                 <div class="row">
                     <div class="col">
-                        <a class="btn <%=buttonColor%>">Add</a>
+                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">add</i></a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <table class="highlight" width="800">
-                            <thead>
-                                <tr>
-                                    <th width="200">Title</th>
-                                    <th width="300">Content</th>
-                                    <th width="100">Created Date</th>
-                                    <th width="200">Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>Some fancey title</td>
-                                    <td class="truncate">Truncated descriotion that supposed to be quite long, and very
-                                        cvery long not so sure how long but really really long</td>
-                                    <td>16 Mar 2020</td>
-                                    <td>
-                                        <a class="btn" href="">Edit</a>
-                                        <a class="btn" href="">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="col m3">Title</div>
+                    <div class="col m4 hide-on-small-only">Content</div>
+                    <div class="col m2">Date Created</div>
+                    <div class="col m3">Action</div>
+                </div>
+                <div class="hr grey lighten-4 <%=textColor%>"></div>
+                <div class="row">
+                    <div class="col m3">Sample Title of something nice nice</div>
+                    <div class="col m4 truncated hide-on-small-only">Content that is very long and still super super long but truncated</div>
+                    <div class="col m2">16 Jun 2020</div>
+                    <div class="col m3">
+                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">edit</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%> "><i class="material-icons">delete</i></a>
                     </div>
                 </div>
+                <div class="hr grey lighten-4 <%=textColor%>"></div>
+                <div class="row">
+                    <div class="col m3">Sample Title of something nice nice</div>
+                    <div class="col m4 truncated hide-on-small-only">Content that is very long and still super super long but truncated</div>
+                    <div class="col m2">16 Jun 2020</div>
+                    <div class="col m3">
+                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">edit</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%> "><i class="material-icons">delete</i></a>
+                    </div>
+                </div>
+                <div class="hr grey lighten-4 <%=textColor%>"></div>
             </div>
         </div>
     </content>
