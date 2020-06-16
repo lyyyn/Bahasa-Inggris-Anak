@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Andika&family=Balsamiq+Sans&family=Comic+Neue:wght@300;400;700&family=Delius&family=Handlee&family=Patrick+Hand&family=Questrial&family=Quicksand:wght@300;400;500&display=swap');
 
+/* *{
+    border: 1px solid gold;
+} */
+
 html {
-    /* font-family: 'ABeeZee', sans-serif; */
-    /* font-family: 'Andika', sans-serif; */
-    /* font-family: 'Balsamiq Sans', cursive; */
-    /* font-family: 'Comic Neue', cursive; */
-    
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'ABeeZee', sans-serif;
     /* font-family: 'Handlee', cursive; */
-    /* font-family: 'Patrick Hand', cursive; */
     /* font-family: 'Questrial', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Delius', cursive;
 }
 
-.container {
-    width: 100vw;
+h1 {
+    font-size: 3.5rem;
+}
+
+.menu {
+    /* font-family: 'Andika', sans-serif; */
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 header {
