@@ -1,5 +1,5 @@
-const fe = require('./feController');
-const be = require('./beController');
+const be = require('./controllerBE');
+const fe = require('./controllerFE');
 		
 module.exports = (app) => {
     // BE - Add Page in Teacher Section
@@ -19,6 +19,9 @@ module.exports = (app) => {
 
     // BE - Teacher - DELETE
     app.delete('/kntrblkg/guru/:idx', be.guruDelete);
+
+    // BE - Admin Panel
+    app.get('/kntrblkg', be.adminPanel);
 
     // FE - Homepage
     app.get('/', fe.index);

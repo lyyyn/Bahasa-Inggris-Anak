@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Bahasa Inggris Anak - Admin</title>
+</head>
+
+<body>
+    <header-blkg>
+        <nav class="nav-wrapper transparent">
+            <div>
+                <a href="/kntrblkg" class="brand-logo">
+                    <h4 class="black-text">BIA - Admin</h4>
+                </a>
+                <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons light-blue-text text-darken-2">menu</i>
+                </a>
+                <ul class="right hide-on-small-only">
+                    <li><a class="menu light-blue darken-2" href="#">Logout</a></li>
+                </ul>
+                <ul class="sidenav white" id="mobile-menu">
+                    <li  class="side menu red darken-4 white-text"><a href="/kntrblkg">Dasbor</a></li>
+                    <li class="side menu orange darken-3 white-text"><a  href="/kntrblkg/guru">Guru</a></li>
+                    <li><a class="side menu amber white-text" href="#">Orang Tua</a></li>
+                    <li><a class="side menu green accent-4 white-text" href="#">Materi</a></li>
+                    <li><a class="side menu light-blue darken-2 white-text" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header-blkg>
+
+    <content>
+        <div class="row">
+            <%- include('../partials/adm-side-menu.ejs') %>
+            <div class="col s12 m10">
+                <h4 class="red-text text-darken-4"><%=sectionName%></h4>
+                <div>
+                    Variety of dashboard widget here
+                </div>
+            </div>
+        </div>
+    </content>
+
+    <%- include('../partials/body-bottom.ejs') %>
+</body>
+
+</html>

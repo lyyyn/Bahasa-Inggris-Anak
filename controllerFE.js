@@ -1,9 +1,10 @@
 // 'Database'
 // const guru = require('./models/guru.js');
 
+
 module.exports = {
     index: (req, res) => {
-        res.sendFile('/index.html');
+        res.sendFile('index.html');
     },
     guruSection: (req, res) => {
         res.render('section.ejs',
