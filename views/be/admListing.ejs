@@ -7,28 +7,7 @@
 </head>
 
 <body>
-    <header-blkg>
-        <nav class="nav-wrapper transparent">
-            <div>
-                <a href="/kntrblkg" class="brand-logo">
-                    <h4 class="black-text">BIA - Admin</h4>
-                </a>
-                <a href="" class="sidenav-trigger" data-target="mobile-menu">
-                    <i class="material-icons light-blue-text text-darken-2">menu</i>
-                </a>
-                <ul class="right hide-on-small-only">
-                    <li><a class="menu light-blue darken-2" href="#">Logout</a></li>
-                </ul>
-                <ul class="sidenav white" id="mobile-menu">
-                    <li  class="side menu red darken-4 white-text"><a href="/kntrblkg">Dashboard</a></li>
-                    <li class="side menu orange darken-3 white-text"><a  href="/kntrblkg/guru">Guru</a></li>
-                    <li><a class="side menu amber white-text" href="#">Orang Tua</a></li>
-                    <li><a class="side menu green accent-4 white-text" href="#">Materi</a></li>
-                    <li><a class="side menu light-blue darken-2 white-text" href="#">Logout</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header-blkg>
+    <%- include('../partials/adm-top-menu.ejs') %>
 
     <content>
         <div class="row">
@@ -36,7 +15,36 @@
             <div class="col s12 m10">
                 <h4 class="red-text <%=titleColor%>"><%=sectionName%></h4>
                 <div class="row">
-                    <a class="btn <%=buttonColor%>">Add</a>
+                    <div class="col">
+                        <a class="btn <%=buttonColor%>">Add</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="highlight" width="800">
+                            <thead>
+                                <tr>
+                                    <th width="200">Title</th>
+                                    <th width="300">Content</th>
+                                    <th width="100">Created Date</th>
+                                    <th width="200">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Some fancey title</td>
+                                    <td class="truncate">Truncated descriotion that supposed to be quite long, and very
+                                        cvery long not so sure how long but really really long</td>
+                                    <td>16 Mar 2020</td>
+                                    <td>
+                                        <a class="btn" href="">Edit</a>
+                                        <a class="btn" href="">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,10 +15,16 @@ html {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Delius', cursive;
+    margin: 0.6rem 0 0.6rem 0;
 }
 
 h1 {
     font-size: 3.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .menu {
@@ -31,7 +37,12 @@ h1 {
 
 .side {
     height: 50px;
-    padding-left: 5px;
+    padding-left: 0.75rem;
+}
+
+.side:hover {
+    height: 50px;
+    background-color: rgb(229,229,229);
 }
 
 header {
@@ -46,11 +57,18 @@ header {
     object-fit: contain;
 }
 
+.page-title {
+    vertical-align:middle;
+}
+
 @media only screen and (max-width: 700px) {
     .logo {
         height: 60px;
         width: 95px;
         object-position: 0 0;
         object-fit: cover;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0.6rem 0 0.6rem 0;
     }
 }

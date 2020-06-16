@@ -1,7 +1,12 @@
-<div class="left-menu col m2 hide-on-small-only">
-    <h4>CMS</h4>
-    <a class="menu white-text" href="/kntrblkg"><div class="side valign-wrapper red darken-4">Dasbor</div></a>
-    <a class="menu white-text" href="/kntrblkg/guru"><div class="side valign-wrapper orange darken-3">Guru</div></a>
-    <a class="menu white-text" href=""><div class="side valign-wrapper amber">Orang Tua</div></a>
-    <a class="menu white-text" href=""><div class="side valign-wrapper green accent-4">Materi</div></a>
+<div class="left-menu col m2 hide-on-med-and-down">
+    <div class="row">
+        <div class="col"><h4>CMS</h4></div>
+    </div>
+    <div class="row">
+        <a class="side menu valign-wrapper <%if (sectionName === 'Dashboard') {%>red darken-4 white-text<%} else {%>red-text text-darken-4<%}%>" href="/kntrblkg">Dasbor</a>
+        <a class="side menu valign-wrapper <%if (sectionName === 'Guru') {%>orange darken-3 white-text<%} else {%>orange-text text-darken-3<%}%>" href="/kntrblkg/guru">Guru</a>
+        <a class="side menu valign-wrapper <%if (sectionName === 'Ortu') {%>amber white-text<%} else {%>amber-text<%}%>" href="">Orang Tua</a>
+        <a class="side menu valign-wrapper <%if (sectionName === 'Materi') {%>green accent-4 white-text<%} else {%>green-text text-accent-4<%}%>" href="">Materi</a>
+    </div>
+    
 </div>
