@@ -1,5 +1,5 @@
-const be = require('./controllerBE');
-const fe = require('./controllerFE');
+const be = require('./controllers/controllerBE');
+const fe = require('./controllers/controllerFE');
 		
 module.exports = (app) => {
     // BE - Add Page in Teacher Section
