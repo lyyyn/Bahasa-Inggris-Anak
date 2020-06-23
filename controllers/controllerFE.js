@@ -4,7 +4,7 @@
 
 module.exports = {
     index: (req, res) => {
-        res.sendFile('index.html');
+        res.render('fe/index.ejs');
     },
     guruSection: (req, res) => {
         res.render('section.ejs',
