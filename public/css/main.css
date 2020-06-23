@@ -50,11 +50,20 @@ ul {
     background-color: rgb(229,229,229);
 }
 
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+
 header {
     background: url("/imgs/header.png");
     background-size: cover;
     background-position: center;
     min-height: 250px;
+}
+
+.input-field {
+    margin: 0 0.75rem 0 0.75rem;
 }
 
 .logo {
@@ -64,6 +73,10 @@ header {
 
 .page-title {
     vertical-align:middle;
+}
+
+.inactive-color {
+    color: silver;
 }
 
 @media only screen and (max-width: 700px) {
