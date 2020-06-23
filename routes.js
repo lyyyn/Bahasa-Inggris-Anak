@@ -6,7 +6,7 @@ module.exports = (app) => {
     app.get('/kntrblkg/guru/add', be.guruAdd);
 
     // BE - Edit Page in Teacher Section
-    app.get('/kntrblkg/guru/edit/:idx', be.guruEdit);
+    app.get('/kntrblkg/guru/:idx', be.guruEdit);
 
     // BE - Listing All Pages under Teacher Section
     app.get('/kntrblkg/guru', be.guruList);
