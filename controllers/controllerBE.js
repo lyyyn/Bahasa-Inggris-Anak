@@ -1,17 +1,18 @@
-// 'Database'
-// const guru = require('./models/guru.js');
+const guruRepo = require('../repositories/guruRepo');
 const path = require('path');
 
 module.exports = {
     adminPanel: (req, res) => {
-        res.render('be/dashboard.ejs',{
+        res.render('be/dashboard.ejs', {
             sectionName: 'Dashboard',
             textColor: 'red-text text-darken-4',
             sectionColor: 'red darken-4'
         });
     },
-    guruList: (req, res) => {
-        res.render('be/admListing.ejs',{
+    async guruList(req, res) {
+        const items = await guruRepo.getAll();
+        return res.render('be/admListing.ejs', {
+            items,
             sectionName: 'Guru',
             textColor: 'orange-text text-darken-3',
             sectionColor: 'orange darken-3'
@@ -21,15 +22,15 @@ module.exports = {
         res.render('be/edit.ejs',
             {
                 sectionName: 'Guru',
-                type:'Add'
+                type: 'Add'
             });
     },
     guruEdit: (req, res) => {
         res.render('be/edit.ejs',
             {
                 sectionName: 'Guru',
-                type:'Edit',
-                idx:'/' + req.params.idx
+                type: 'Edit',
+                idx: '/' + req.params.idx
             });
     },
     guruCreate: (req, res) => {

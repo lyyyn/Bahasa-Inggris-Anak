@@ -25,28 +25,19 @@
                     <div class="col m3 l2 hide-on-small-only">Date Created</div>
                     <div class="col s5 m4 l3">Action</div>
                 </div>
+                <%items.forEach((item,id) => {%>
                 <div class="hr grey lighten-4 <%=textColor%>"></div>
                 <div class="row">
-                    <div class="col s7 m5 l3">Sample Title of something nice nice</div>
-                    <div class="col l4 truncated hide-on-med-and-down">Content that is very long and still super super long but truncated</div>
-                    <div class="col m3 l2 hide-on-small-only">16 Jun 2020</div>
+                    <div class="col s7 m5 l3"><%=item.Title%></div>
+                    <div class="col l4 truncated hide-on-med-and-down"><%=item.Artikel.substr(0,100)%></div>
+                    <div class="col m3 l2 hide-on-small-only"><%=item.CreatedDate%></div>
                     <div class="col s5 m4 l3">
                         <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
                         <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">edit</i></a>
                         <a class="btn grey lighten-4 <%=textColor%> "><i class="material-icons">delete</i></a>
                     </div>
                 </div>
-                <div class="hr grey lighten-4 <%=textColor%>"></div>
-                <div class="row">
-                    <div class="col s7 m5 l3">Sample Title of something nice nice</div>
-                    <div class="col l4 truncated hide-on-med-and-down">Content that is very long and still super super long but truncated</div>
-                    <div class="col m3 l2 hide-on-small-only">16 Jun 2020</div>
-                    <div class="col s5 m4 l3">
-                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
-                        <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">edit</i></a>
-                        <a class="btn grey lighten-4 <%=textColor%> "><i class="material-icons">delete</i></a>
-                    </div>
-                </div>
+                <%})%>
                 <div class="hr grey lighten-4 <%=textColor%>"></div>
             </div>
         </div>
