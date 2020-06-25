@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Andika&family=Balsamiq+Sans&family=Comic+Neue:wght@300;400;700&family=Delius&family=Handlee&family=Patrick+Hand&family=Questrial&family=Quicksand:wght@300;400;500&display=swap');
+
+/* *{
+    border: 1px solid gold;
+} */
+
+html {
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Delius', cursive;
+    margin: 0.6rem 0 0.6rem 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+
+header {
+    background: url("/imgs/header.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+}
+
+.logo {
+    height: 60px;
+    object-fit: contain;
+}
+
+.page-title {
+    vertical-align:middle;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .logo {
+        height: 60px;
+        width: 95px;
+        object-position: 0 0;
+        object-fit: cover;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0.6rem 0 0.6rem 0;
+    }
+}
