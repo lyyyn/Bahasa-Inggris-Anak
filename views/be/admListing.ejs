@@ -30,7 +30,7 @@
                 <div class="hr grey lighten-4 <%=textColor%>"></div>
                 <div class="row<% if (!item.Status) {%> inactive-color<%}%>">
                     <div class="col s7 m5 l3"><%=item.Title%></div>
-                    <div class=" col l4 truncated hide-on-med-and-down"><%=item.Artikel.substr(0,100)%></div>
+                    <div class=" col l4 truncated hide-on-med-and-down"><%=item.Artikel.replace(/(<([^>]+)>)/ig, "").substr(0,100)%></div>
                     <div class="col m3 l2 hide-on-small-only"><% if (item.Status) {%>Aktif<%} else {%>Tidak Aktif<%}%></div>
                     <div class="col s5 m4 l3">
                         <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
