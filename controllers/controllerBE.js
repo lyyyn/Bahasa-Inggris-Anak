@@ -31,15 +31,16 @@ module.exports = {
                 sectionColor: GURU_SECTION_COLOR
             });
     },
-    guruEdit: (req, res) => {
-        res.render('be/edit.ejs',
-            {
+    async guruEdit (req, res) {
+        const item = await guruRepo.getOneByID(req.params.idx);
+        return res.render('be/edit.ejs', {
+                item,
+                checkStatus: (item.Status) ? "Checked" : "",
                 sectionName: GURU_SECTION_NAME,
                 type: 'Edit',
-                idx: '/' + req.params.idx,
                 textColor: GURU_TEXT_COLOR,
                 sectionColor: GURU_SECTION_COLOR
-            });
+        });
     },
     async guruCreate (req, res) {
         // add to database
@@ -56,11 +57,19 @@ module.exports = {
         // return res.send(item); //debug
         res.redirect('/kntrblkg/guru');
     },
-    guruUpdate: (req, res) => {
-        // add our form data to our Array Data
-        // guru[req.params.idx] = (req.body);
-        // res.redirect('/guruList');
-        res.send('guru Updated');
+    async guruUpdate (req, res) {
+        // add to database
+        const item = {
+            'Title': req.body.judul,
+            'Artikel': req.body.artikel,
+            'Status': (req.body.status === 'on'? true : false),
+            'CreatedDate': req.body.CreatedDate,
+            'CreatedBy': req.body.CreatedBy,
+            'UpdatedDate': new Date(Date.now()).toISOString(),
+            'UpdatedBy': 'Lina'
+        };
+        await guruRepo.updateByID(req.body._id,item);
+        res.redirect('/kntrblkg/guru');
     },
     guruDelete: (req, res) => {
         // add our form data to our Array Data

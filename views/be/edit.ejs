@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-    <title>Bahasa Inggris Anak - <%=type%>> - <%=sectionName%></title>
+    <title>Bahasa Inggris Anak - <%=type%> - <%=sectionName%></title>
 </head>
 
 <body>
@@ -13,43 +13,49 @@
         <div class="row">
             <%- include('../partials/adm-side-menu.ejs') %>
             <div class="col m12 l10">
-                <h4 class="red-text <%=textColor%>"><%=sectionName%></h4>
+                <h4 class="red-text <%=textColor%>"><%=sectionName%> - <%=type%></h4>
+                <br/>
+                <div class="row">
+                    <form class="col s11 m11 l9" action="/kntrblkg/guru<%if (type === 'Edit') {%>/<%=item._id%><%}%><%if (type === 'Edit') {%>?_method=PUT<%}%>" method="POST">
+                        <div class="row">
+                            <div class="input-field">
+                                <input id="judul" name="judul" type="text" class="validate" required="" aria-required="true" value="<%if (type === 'Edit') {%><%=item.Title%><%}%>">
+                                <label for="judul">Judul</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field">
+                                <textarea id="artikel" name="artikel" class="materialize-textarea" required="" aria-required="true"><%if (type === 'Edit') {%><%=item.Artikel%><%}%></textarea>
+                                <label for="artikel">Artikel</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field">
+                                <p>
+                                    <label>
+                                      <input id="status" name="status" class="filled-in" type="checkbox" <%if (type === 'Edit') {%><%=checkStatus%><%}%> />
+                                      <span>Aktif</span>
+                                    </label>
+                                  </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input id="_id" name="_id" type="text" hidden value="<%if (type === 'Edit') {%><%=item._id%><%}%>">
+                                <input id="CreatedDate" name="CreatedDate" type="text" hidden value="<%if (type === 'Edit') {%><%=item.CreatedDate%><%}%>">
+                                <input id="CreatedBy" name="CreatedBy" type="text" hidden value="<%if (type === 'Edit') {%><%=item.CreatedBy%><%}%>">
+                                <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru"><i
+                            class="material-icons">arrow_back</i> Kembali</a>
+                        <button class="btn grey lighten-4 <%=textColor%>" type="submit"><i
+                                class="material-icons">save</i>
+                            Simpan</button>
+                </div>
             </div>
-            <div class="row">
-                <form class="col s11 m11 l9" action="/kntrblkg/guru<%if (type === 'Edit') {%><%=idx%><%}%><%if (type === 'Edit') {%>?_method=PUT<%}%>" method="POST">
-                    <div class="row">
-                        <div class="input-field">
-                            <input id="judul" name="judul" type="text" class="validate">
-                            <label for="judul">Judul</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field">
-                            <textarea id="artikel" name="artikel" class="materialize-textarea"></textarea>
-                            <label for="artikel">Artikel</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field">
-                            <p>
-                                <label>
-                                  <input id="status" name="status" class="filled-in" type="checkbox" checked="checked" />
-                                  <span>Aktif</span>
-                                </label>
-                              </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru"><i
-                                    class="material-icons">arrow_back</i> Kembali</a>
-                            <button class="btn grey lighten-4 <%=textColor%>" type="submit"><i
-                                    class="material-icons">save</i>
-                                Simpan</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+
+
+        </div>
+        </form>
+        </div>
         </div>
     </content>
 
