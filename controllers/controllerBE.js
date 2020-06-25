@@ -52,8 +52,8 @@ module.exports = {
             'Status': (req.body.status === 'on'? true : false),
             'CreatedDate': new Date(Date.now()).toISOString(),
             'CreatedBy': 'Lina',
-            'UpdatedDate': '',
-            'UpdatedBy': ''
+            'UpdatedDate': new Date(Date.now()).toISOString(),
+            'UpdatedBy': 'Lina'
         };
         await guruRepo.create(item);
         // return res.send(item); //debug

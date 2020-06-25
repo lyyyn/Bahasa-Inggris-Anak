@@ -3,7 +3,7 @@ const db = require('../db');
 module.exports = {
     async getAll() {
         try {
-            return await db.guru.find().sort({ UpdatedDate: -1, CreatedDate: -1 }).toArray();
+            return await db.guru.find().sort({  UpdatedDate: -1}).toArray();
         } catch (err) {
             throw new Error(`Database Error - <%=item.Title%>${err.message}`);
         }
