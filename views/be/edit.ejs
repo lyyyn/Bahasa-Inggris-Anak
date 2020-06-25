@@ -26,14 +26,14 @@
                         <div class="row">
                             <div class="input-field">
                                 <textarea id="artikel" name="artikel" class="materialize-textarea" required="" aria-required="true"><%if (type === 'Edit') {%><%=item.Artikel%><%}%></textarea>
-                                <label for="artikel">Artikel</label>
+                                
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field">
                                 <p>
                                     <label>
-                                      <input id="status" name="status" class="filled-in" type="checkbox" <%if (type === 'Edit') {%><%=checkStatus%><%}%> />
+                                      <input id="status" name="status" class="filled-in" type="checkbox" <%=checkStatus%> />
                                       <span>Aktif</span>
                                     </label>
                                   </p>
@@ -58,8 +58,7 @@
         </div>
         </div>
     </content>
-
-    <%- include('../partials/body-bottom.ejs') %>
+    <%- include('../partials/body-bottom.ejs',{item}) %>
 </body>
 
 </html>

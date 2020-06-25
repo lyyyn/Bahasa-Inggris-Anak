@@ -25,6 +25,8 @@ module.exports = {
     guruAdd: (req, res) => {
         res.render('be/edit.ejs',
             {
+                item: {Artikel:""},
+                checkStatus: "Checked",
                 sectionName: GURU_SECTION_NAME,
                 type: 'Add',
                 textColor: GURU_TEXT_COLOR,
