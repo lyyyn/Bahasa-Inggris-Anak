@@ -8,9 +8,6 @@ html {
     font-size: 16px;
     text-align: justify;
     font-family: 'ABeeZee', sans-serif;
-    /* font-family: 'Handlee', cursive; */
-    /* font-family: 'Questrial', sans-serif; */
-    /* font-family: 'Quicksand', sans-serif; */
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -55,20 +52,8 @@ ul {
     vertical-align: top;
 }
 
-header {
-    background: url("/imgs/header.png");
-    background-size: cover;
-    background-position: center;
-    min-height: 250px;
-}
-
 .input-field {
     margin: 0 0.75rem 0 0.75rem;
-}
-
-.logo {
-    height: 60px;
-    object-fit: contain;
 }
 
 .page-title {
@@ -84,12 +69,6 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
-    .logo {
-        height: 60px;
-        width: 95px;
-        object-position: 0 0;
-        object-fit: cover;
-    }
     h1,h2,h3,h4,h5,h6 {
         margin: 0.6rem 0 0.6rem 0;
     }
