@@ -7,7 +7,7 @@ module.exports = {
         res.render('fe/index.ejs');
     },
     guruSection: (req, res) => {
-        res.render('section.ejs',
+        res.render('fe/section.ejs',
             {
                 sectionName: 'Guru'
             });
