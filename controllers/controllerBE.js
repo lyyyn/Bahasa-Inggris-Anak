@@ -71,11 +71,9 @@ module.exports = {
         await guruRepo.updateByID(req.body._id,item);
         res.redirect('/kntrblkg/guru');
     },
-    guruDelete: (req, res) => {
-        // add our form data to our Array Data
-        // guru.splice(req.params.idx, 1);
-        // res.redirect('/guruList');
-        res.send('guru Delete');
+    async guruDelete (req, res) {
+        await guruRepo.deleteByID(req.params.idx);
+        res.redirect('/kntrblkg/guru');
     },
 
 };

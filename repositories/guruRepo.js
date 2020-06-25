@@ -27,8 +27,7 @@ module.exports = {
         const o_id = new ObjectId(idx); // convert to ObjectId
         const foundItem = await db.guru.findOne({
             _id: o_id
-        }
-        );
+        });
         if (!foundItem) throw new Error(`Item with _id '${idx}' does not exist`);
         return foundItem;
     },
@@ -46,5 +45,12 @@ module.exports = {
         } catch (err) {
             throw new Error(`Due to ${err.message}, I cannot update it with ${JSON.stringify(item)}`);
         }
+    },
+    async deleteByID(idx) {
+        const ObjectId = require('mongodb').ObjectId;
+        const o_id = new ObjectId(idx); // convert to ObjectId
+        await db.guru.deleteOne({
+            _id: o_id
+        });
     }
 };

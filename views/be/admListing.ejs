@@ -16,7 +16,8 @@
                 <h4 class="red-text <%=textColor%>"><%=sectionName%></h4>
                 <div class="row">
                     <div class="col">
-                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/add"><i class="material-icons">add</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/add"><i
+                                class="material-icons">add</i></a>
                     </div>
                 </div>
                 <div class="row">
@@ -29,17 +30,21 @@
                 <div class="hr grey lighten-4 <%=textColor%>"></div>
                 <div class="row<% if (!item.Status) {%> inactive-color<%}%>">
                     <div class="col s7 m5 l3"><%=item.Title%></div>
-                    <div class="col l4 truncated hide-on-med-and-down"><%=item.Artikel.substr(0,100)%></div>
+                    <div class=" col l4 truncated hide-on-med-and-down"><%=item.Artikel.substr(0,100)%></div>
                     <div class="col m3 l2 hide-on-small-only"><% if (item.Status) {%>Aktif<%} else {%>Tidak Aktif<%}%></div>
                     <div class="col s5 m4 l3">
                         <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
-                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/<%=item._id%>"><i class="material-icons">edit</i></a>
-                        <a class="btn grey lighten-4 <%=textColor%> "><i class="material-icons">delete</i></a>
+                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/<%=item._id%>"><i
+                            class="material-icons">edit</i></a>
+                        <form class="force-inline" action="/kntrblkg/guru/<%=item._id%>?_method=DELETE" method="POST">
+                            <button class="btn grey lighten-4 <%=textColor%> " type="submit"><i
+                                    class="material-icons">delete</i></button>
+                        </form>
                     </div>
                 </div>
                 <%})%>
-                <div class="hr grey lighten-4 <%=textColor%>"></div>
-            </div>
+            <div class="hr grey lighten-4 <%=textColor%>"></div>
+        </div>
         </div>
     </content>
 
