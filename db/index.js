@@ -9,9 +9,9 @@ const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = process.env.MONGODB_URI || 'mongodb+srv://dbLina:jBdf48k6DlIEp3ZK@clstrlin001-ldhm1.mongodb.net/bia?retryWrites=true&w=majority';
 const DB_NAME = 'bia';
 const COLLECTIONS = {
-    ARTIKEL: 'secGuru',
+    ARTIKEL: 'secArtikel',
     MATERI: 'secMateri',
-    USER: 'secOrtu'
+    USER: 'secUser'
 };
 
 const client = new MongoClient(MONGO_URL, { useUnifiedTopology: true });
