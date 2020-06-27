@@ -11,8 +11,8 @@ module.exports = {
     },
     async guruSection(req, res) {
         const items = await guruRepo.getAll();
-        return res.render('fe/section.ejs', {
-            page: 'fe-guru-listing',
+        return res.render('fe/index.ejs', {
+            page: 'fe-section-content',
             items,
             sectionName: ' - ' + GURU_SECTION_NAME
         });

@@ -30,5 +30,5 @@ module.exports = (app) => {
     app.get('/guru', fe.guruSection);
 
     // FE - Display Teacher Section Detail
-    app.get('/guru/:urlTitle', fe.guruSectionDetail);
+    app.get('/guru/:idx', fe.guruSectionDetail);
 };
