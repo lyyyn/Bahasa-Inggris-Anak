@@ -1,5 +1,5 @@
-const guruRepo = require('../repositories/guruRepo');
-const GURU_SECTION_NAME = 'Guru';
+const artikelRepo = require('../repositories/artikelRepo');
+const ARTIKEL_SECTION_NAME = 'Artikel';
 
 module.exports = {
     index: (req, res) => {
@@ -9,18 +9,18 @@ module.exports = {
             sectionName: ''
         });
     },
-    async guruSection(req, res) {
-        const items = await guruRepo.getAll();
+    async artikelSection(req, res) {
+        const items = await artikelRepo.getAll();
         return res.render('fe/index.ejs', {
             page: 'fe-section-content',
             items,
-            sectionName: ' - ' + GURU_SECTION_NAME
+            sectionName: ' - ' + ARTIKEL_SECTION_NAME
         });
     },
-    guruSectionDetail: (req, res) => {
+    artikelSectionDetail: (req, res) => {
         res.render('sectionDetail.ejs',
             {
-                sectionName: 'Guru',
+                sectionName: 'Artikel',
                 urlTitle: req.params.urlTitle
             });
     }

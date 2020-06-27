@@ -16,7 +16,7 @@
                 <h4 class="red-text <%=textColor%>"><%=sectionName%></h4>
                 <div class="row">
                     <div class="col">
-                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/add"><i
+                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/artikel/add"><i
                                 class="material-icons">add</i></a>
                     </div>
                 </div>
@@ -34,9 +34,9 @@
                     <div class="col m3 l2 hide-on-small-only"><% if (item.Status) {%>Aktif<%} else {%>Tidak Aktif<%}%></div>
                     <div class="col s5 m4 l3">
                         <a class="btn grey lighten-4 <%=textColor%>"><i class="material-icons">remove_red_eye</i></a>
-                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/guru/<%=item._id%>"><i
+                        <a class="btn grey lighten-4 <%=textColor%>" href="/kntrblkg/artikel/<%=item._id%>"><i
                             class="material-icons">edit</i></a>
-                        <form class="force-inline" action="/kntrblkg/guru/<%=item._id%>?_method=DELETE" method="POST">
+                        <form class="force-inline" action="/kntrblkg/artikel/<%=item._id%>?_method=DELETE" method="POST">
                             <button class="btn grey lighten-4 <%=textColor%> " type="submit"><i
                                     class="material-icons">delete</i></button>
                         </form>

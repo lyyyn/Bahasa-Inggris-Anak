@@ -3,22 +3,22 @@ const fe = require('./controllers/controllerFE');
 		
 module.exports = (app) => {
     // BE - Add Page in Teacher Section
-    app.get('/kntrblkg/guru/add', be.guruAdd);
+    app.get('/kntrblkg/artikel/add', be.artikelAdd);
 
     // BE - Edit Page in Teacher Section
-    app.get('/kntrblkg/guru/:idx', be.guruEdit);
+    app.get('/kntrblkg/artikel/:idx', be.artikelEdit);
 
     // BE - Listing All Pages under Teacher Section
-    app.get('/kntrblkg/guru', be.guruList);
+    app.get('/kntrblkg/artikel', be.artikelList);
 
     // BE - Teacher - CREATE
-    app.post('/kntrblkg/guru', be.guruCreate);
+    app.post('/kntrblkg/artikel', be.artikelCreate);
 
     // BE - Teacher - UPDATE
-    app.put('/kntrblkg/guru/:idx', be.guruUpdate);
+    app.put('/kntrblkg/artikel/:idx', be.artikelUpdate);
 
     // BE - Teacher - DELETE
-    app.delete('/kntrblkg/guru/:idx', be.guruDelete);
+    app.delete('/kntrblkg/artikel/:idx', be.artikelDelete);
 
     // BE - Admin Panel
     app.get('/kntrblkg', be.adminPanel);
@@ -27,8 +27,8 @@ module.exports = (app) => {
     app.get('/', fe.index);
 
     // FE - Display Teacher Section
-    app.get('/guru', fe.guruSection);
+    app.get('/artikel', fe.artikelSection);
 
     // FE - Display Teacher Section Detail
-    app.get('/guru/:idx', fe.guruSectionDetail);
+    app.get('/artikel/:idx', fe.artikelSectionDetail);
 };

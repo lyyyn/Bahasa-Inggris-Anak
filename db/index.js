@@ -9,7 +9,7 @@ const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = process.env.MONGODB_URI || 'mongodb+srv://dbLina:jBdf48k6DlIEp3ZK@clstrlin001-ldhm1.mongodb.net/bia?retryWrites=true&w=majority';
 const DB_NAME = 'bia';
 const COLLECTIONS = {
-    GURU: 'secGuru',
+    ARTIKEL: 'secGuru',
     MATERI: 'secMateri',
     ORTU: 'secOrtu'
 };
@@ -21,7 +21,7 @@ module.exports = {
         const connection = await client.connect();
         console.log('Connected to MongoDB - BIA');
         const db = connection.db(DB_NAME);
-        this.guru = db.collection(COLLECTIONS.GURU);
+        this.artikel = db.collection(COLLECTIONS.ARTIKEL);
         this.ortu = db.collection(COLLECTIONS.ORTU);
         this.materi = db.collection(COLLECTIONS.MATERI);
     },

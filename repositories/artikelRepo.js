@@ -3,19 +3,19 @@ const db = require('../db');
 module.exports = {
     async getAll() {
         try {
-            return await db.guru.find().sort({  UpdatedDate: -1}).toArray();
+            return await db.artikel.find().sort({  UpdatedDate: -1}).toArray();
         } catch (err) {
             throw new Error(`Database Error - <%=item.Title%>${err.message}`);
         }
     },
     async show(title) {
-        const item = await db.guru.findOne({ title: { '$regex': `^${title}$`, '$options': 'i' } });
+        const item = await db.artikel.findOne({ title: { '$regex': `^${title}$`, '$options': 'i' } });
         if (!item) throw new Error('Non-existance');
         return item;
     },
     async create(item) {
         try {
-            const { insertedCount } = await db.guru.insertOne(item);
+            const { insertedCount } = await db.artikel.insertOne(item);
             if (!insertedCount) throw new Error('insertion failure');
             return true;
         } catch (err) {
@@ -25,7 +25,7 @@ module.exports = {
     async getOneByID(idx) {
         const ObjectId = require('mongodb').ObjectId;
         const o_id = new ObjectId(idx); // convert to ObjectId
-        const foundItem = await db.guru.findOne({
+        const foundItem = await db.artikel.findOne({
             _id: o_id
         });
         if (!foundItem) throw new Error(`Item with _id '${idx}' does not exist`);
@@ -35,7 +35,7 @@ module.exports = {
         const ObjectId = require('mongodb').ObjectId;
         const o_id = new ObjectId(idx); // convert to ObjectId
         try {
-            const { matchedCount } = await db.guru.updateOne({
+            const { matchedCount } = await db.artikel.updateOne({
                 _id: o_id
             }, {
                 $set: item
@@ -49,7 +49,7 @@ module.exports = {
     async deleteByID(idx) {
         const ObjectId = require('mongodb').ObjectId;
         const o_id = new ObjectId(idx); // convert to ObjectId
-        await db.guru.deleteOne({
+        await db.artikel.deleteOne({
             _id: o_id
         });
     }
