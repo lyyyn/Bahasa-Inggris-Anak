@@ -11,7 +11,7 @@ const DB_NAME = 'bia';
 const COLLECTIONS = {
     ARTIKEL: 'secGuru',
     MATERI: 'secMateri',
-    ORTU: 'secOrtu'
+    USER: 'secOrtu'
 };
 
 const client = new MongoClient(MONGO_URL, { useUnifiedTopology: true });
@@ -22,7 +22,7 @@ module.exports = {
         console.log('Connected to MongoDB - BIA');
         const db = connection.db(DB_NAME);
         this.artikel = db.collection(COLLECTIONS.ARTIKEL);
-        this.ortu = db.collection(COLLECTIONS.ORTU);
+        this.user = db.collection(COLLECTIONS.USER);
         this.materi = db.collection(COLLECTIONS.MATERI);
     },
     disconnect () {
