@@ -9,6 +9,9 @@ module.exports = {
             sectionName: ''
         });
     },
+    contact: (req, res) => {
+        res.render('fe/contact.ejs');
+    },
     async artikelSection(req, res) {
         const items = await artikelRepo.getAll();
         return res.render('fe/index.ejs', {

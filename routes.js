@@ -39,8 +39,11 @@ module.exports = (app) => {
     // FE - Create New User
     app.post('/daftar', usr.daftarPenggunaBaru);
 
-    // FE - Display Teacher Section
+    // FE - Display Artikel Section
     app.get('/artikel', fe.artikelSection);
+
+    // FE - Contact
+    app.get('/contact', fe.contact);
 
     // FE - Display Teacher Section Detail
     app.get('/artikel/:idx', fe.artikelSectionDetail);
