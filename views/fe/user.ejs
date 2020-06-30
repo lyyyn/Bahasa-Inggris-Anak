@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/fe-head.ejs') %>
+    <title>Bahasa Inggris Anak - <%=type%></title>
+</head>
+
+<body>
+    <%- include('../partials/fe-top-menu-min.ejs') %>
+    <div class="container">
+        <form class="col" action="/<%=type.toLowerCase()%>" method="POST">
+            <div class="modal-content">
+                <h4><%=type%></h4>
+                <br />
+                <%if (type === 'Daftar') {%>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="nama" name="nama" type="text" class="validate" required=""
+                            aria-required="true">
+                        <label for="nama">Nama</label>
+                    </div>
+                </div>
+                <%}%>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="sandi" name="sandi" type="password" class="validate" required=""
+                            aria-required="true">
+                        <label for="sandi">Kata Sandi</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#!" class="btn">Batal</a>
+                <button class="btn" type="submit"><i class="material-icons right">send</i> <%=type%></button>
+            </div>
+        </form>
+    </div>
+    <%- include('../partials/fe-js-bottom.ejs') %>
+</body>
+
+</html>

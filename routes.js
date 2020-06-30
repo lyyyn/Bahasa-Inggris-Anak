@@ -1,5 +1,6 @@
 const be = require('./controllers/controllerBE');
 const fe = require('./controllers/controllerFE');
+const usr = require('./controllers/controllerUser');
 		
 module.exports = (app) => {
     // BE - Add Page in Teacher Section
@@ -25,6 +26,18 @@ module.exports = (app) => {
 
     // FE - Homepage
     app.get('/', fe.index);
+
+    // FE - Login
+    app.get('/masuk', usr.masuk);
+
+    // FE - Log User In
+    app.post('/masuk', usr.masukin);
+
+    // FE - Register
+    app.get('/daftar', usr.daftar);
+
+    // FE - Create New User
+    app.post('/daftar', usr.daftarPenggunaBaru);
 
     // FE - Display Teacher Section
     app.get('/artikel', fe.artikelSection);
