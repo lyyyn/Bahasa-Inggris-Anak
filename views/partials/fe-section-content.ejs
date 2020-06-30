@@ -13,7 +13,7 @@
                         <div class="card-image">
                           <img src="<%=item.Image%>">
                           <span class="card-title"><%=item.Title%></span>
-                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">more</i></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light blue light-4" href="/artikel/<%=item._id%>"><i class="material-icons">more</i></a>
                         </div>
                         <div class="card-content">
                           <p><%=item.Artikel.replace(/(<([^>]+)>)/ig, "").substr(0,100)%>...</p>

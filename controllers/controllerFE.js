@@ -17,11 +17,12 @@ module.exports = {
             sectionName: ' - ' + ARTIKEL_SECTION_NAME
         });
     },
-    artikelSectionDetail: (req, res) => {
-        res.render('sectionDetail.ejs',
-            {
-                sectionName: 'Artikel',
-                urlTitle: req.params.urlTitle
-            });
+    async artikelSectionDetail (req, res) {
+        const items = await artikelRepo.getOneByID(req.params.idx);
+        return res.render('fe/index.ejs', {
+            page: 'fe-section-detail',
+            items,
+            sectionName: ' - ' + ARTIKEL_SECTION_NAME
+        });
     }
 };
