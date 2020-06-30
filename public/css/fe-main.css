@@ -37,6 +37,10 @@ ul {
     margin: 0 0.75rem 0 0.75rem;
 }
 
+.card-title {
+    background-color: rgb(200,200,200,0.5);
+}
+
 header {
     background: url("/imgs/header.png");
     background-size: cover;

@@ -7,13 +7,21 @@
         </div>
         <div class="row">
             <%items.forEach((item,idx) => {%>
-                <div class="hr grey lighten-4"></div>
                 <div class="row">
-                    <div class="col s7 m5 l3"><%=item.Title%></div>
-                    <div class=" col l4 truncated hide-on-med-and-down"><%=item.Artikel.replace(/(<([^>]+)>)/ig, "").substr(0,100)%></div>
-                    <div class="col m3 l2 hide-on-small-only"><% if (item.Status) {%>Aktif<%} else {%>Tidak Aktif<%}%></div>
-                    
-                </div>
+                    <div class="col s12 m6">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="<%=item.Image%>">
+                          <span class="card-title"><%=item.Title%></span>
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">more</i></a>
+                        </div>
+                        <div class="card-content">
+                          <p><%=item.Artikel.replace(/(<([^>]+)>)/ig, "").substr(0,100)%>...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
                 <%})%>
         </div>
     </section>
