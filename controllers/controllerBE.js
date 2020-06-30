@@ -48,6 +48,7 @@ module.exports = {
         // add to database
         const item = {
             'Title': req.body.judul,
+            'Image': req.body.image,
             'Artikel': req.body.artikel,
             'Status': (req.body.status === 'on'? true : false),
             'CreatedDate': new Date(Date.now()).toISOString(),
@@ -63,6 +64,7 @@ module.exports = {
         // add to database
         const item = {
             'Title': req.body.judul,
+            'Image': req.body.image,
             'Artikel': req.body.artikel,
             'Status': (req.body.status === 'on'? true : false),
             'CreatedDate': req.body.CreatedDate,

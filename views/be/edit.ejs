@@ -25,6 +25,12 @@
                         </div>
                         <div class="row">
                             <div class="input-field">
+                                <input id="image" name="image" type="text" class="validate" required="" aria-required="true" value="<%if (type === 'Edit') {%><%=item.Image%><%}%>">
+                                <label for="image">Cover</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field">
                                 <textarea id="artikel" name="artikel" class="materialize-textarea" required="" aria-required="true"><%if (type === 'Edit') {%><%=item.Artikel%><%}%></textarea>
                                 
                             </div>

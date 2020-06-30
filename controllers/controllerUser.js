@@ -32,7 +32,7 @@ module.exports = {
         });
     },
     masukin: () => {
-        passport.authen
+        // passport.authen
     },
     daftar: (req, res) => {
         res.render('fe/user.ejs', {
