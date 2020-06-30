@@ -4,25 +4,25 @@ const bcrypt = require('bcrypt');
 //Passport
 const passport = require('passport');
 const initPassport = require('../passport-config');
-initPassport(
-	passport,
-    userRepo.getOneByEmail(email),
-    userRepo.getOneByID(id)
-);
-app.use(passport.initialize());
+// initPassport(
+// 	passport,
+//     userRepo.getOneByEmail(email),
+//     userRepo.getOneByID(id)
+// );
+// app.use(passport.initialize());
 
-//Session
-const session = require('express-session');
-app.use(session({
-	secret: process.env.SESSION_SECRET,
-	resave: false,
-	saveUninitialized: false
-}));
-app.use(passport.session());
+// //Session
+// const session = require('express-session');
+// app.use(session({
+// 	secret: process.env.SESSION_SECRET,
+// 	resave: false,
+// 	saveUninitialized: false
+// }));
+// app.use(passport.session());
 
-//Flash
-const flash = require('express-flash');
-app.use(flash());
+// //Flash
+// const flash = require('express-flash');
+// app.use(flash());
 
 
 module.exports = {
